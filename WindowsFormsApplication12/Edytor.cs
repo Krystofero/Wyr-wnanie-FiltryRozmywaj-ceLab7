@@ -253,7 +253,7 @@ namespace EdytorZdjec_v1
         {
             if(pictureBox2.Image != null)
             {
-                pictureBox2.Image.Save(Application.StartupPath + textBox1.Text + "(zmienione).jpg", ImageFormat.Jpeg);
+                pictureBox2.Image.Save(textBox1.Text + "(zmienione).jpg", ImageFormat.Jpeg);
             }
             else
             {
