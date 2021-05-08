@@ -41,8 +41,10 @@ W funkcji calcLut obliczam dystrybuantę rozkładu prawdopodobieństwa, na któr
             return result;
         }
         
-W funkcji wywoływanej po kliknięciu przycisku "Wyrównanie Histogramu" tworzę tablice dla składowych(wcześniej zliczam do tablic ilość pikseli o natężeniu danej barwy(czerwonej, zielonej lub niebieskiej)):     
+W funkcji wywoływanej po kliknięciu przycisku "Wyrównanie Histogramu" tworzę tablice dla składowych(wcześniej zliczam do tablic ilość pikseli o natężeniu danej barwy(czerwonej, zielonej lub niebieskiej)):  
+
  ...
+ 
              for (int x = 0; x < szer; x++)
             {
                 for (int y = 0; y < wys; y++)
@@ -58,9 +60,13 @@ W funkcji wywoływanej po kliknięciu przycisku "Wyrównanie Histogramu" tworzę
             int[] LUTred = calcLUT(red, szer * wys);
             int[] LUTgreen = calcLUT(green, szer * wys);
             int[] LUTblue = calcLUT(blue, szer * wys);
+            
 ...
+
 Następnie przetwarzając obraz wejściowy ustalalam kolor dla pikseli obrazu wyjściowego i go odświeżam:
+
 ...
+
             for (int x = 0; x < szer; x++)
             {
                 for (int y = 0; y < wys; y++)
@@ -73,6 +79,7 @@ Następnie przetwarzając obraz wejściowy ustalalam kolor dla pikseli obrazu wy
             pictureBox2.Image = b2;
             
             pictureBox2.Invalidate();
+            
 ...
 
 Algorytmy Filrów Rozmywających bazują na maskach o wymiarach 3x3. 
@@ -102,3 +109,4 @@ int norm = 0;
                         B /= norm;
                     }
                     
+...
