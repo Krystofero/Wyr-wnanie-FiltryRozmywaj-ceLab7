@@ -16,8 +16,9 @@ Cursor = Cursors.WaitCursor;
 Wyrównywanie histogramu to przeksztalcenie obrazu przy pomocy odpowiednio przygotowanej tablicy LUT. Operacja wyrównywania histogramu pozwala na uwypuklenie tych szczegółów w obrazie, które z uwagi na niewielki kontrast sa mało widoczne.
 W funkcji calcLut obliczam dystrybuantę rozkładu prawdopodobieństwa, na której podstawie otrzymujemy tablice LUT:
    
-   private int[] calcLUT(int[] values, int size)
+      private int[] calcLUT(int[] values, int size)
         {            
+        
             double minValue = 0;
             int[] result = new int[256];
             double sum = 0;
@@ -94,7 +95,7 @@ Zaimplementowane jest w nich normalizowanie maski(czyli dzielimy się wynik prze
 
 ...
 
-int norm = 0;
+         int norm = 0;
             for (int i = 0; i < 3; i++)    
                 for (int j = 0; j < 3; j++)
                     norm += maska[i, j];
