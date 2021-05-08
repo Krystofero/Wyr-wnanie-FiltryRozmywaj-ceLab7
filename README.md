@@ -18,7 +18,8 @@ W funkcji calcLut obliczam dystrybuantę rozkładu prawdopodobieństwa, na któr
    
    private int[] calcLUT(int[] values, int size)
         {
-            //(poszukaj wartości minimalnej - czyli pierwszej niezerowej wartosci dystrybuanty)
+            //(szukaj wartości minimalnej - czyli pierwszej niezerowej wartosci dystrybuanty)
+            
             double minValue = 0;
             int[] result = new int[256];
             double sum = 0;
