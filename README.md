@@ -17,9 +17,7 @@ Wyrównywanie histogramu to przeksztalcenie obrazu przy pomocy odpowiednio przyg
 W funkcji calcLut obliczam dystrybuantę rozkładu prawdopodobieństwa, na której podstawie otrzymujemy tablice LUT:
    
    private int[] calcLUT(int[] values, int size)
-        {
-            //(szukaj wartości minimalnej - czyli pierwszej niezerowej wartosci dystrybuanty)
-            
+        {            
             double minValue = 0;
             int[] result = new int[256];
             double sum = 0;
