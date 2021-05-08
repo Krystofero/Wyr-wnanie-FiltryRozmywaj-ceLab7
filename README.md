@@ -85,12 +85,16 @@ Filtr Gaussa:
 2 4 2
 1 2 1
 Zaimplementowane jest w nich normalizowanie maski(czyli dzielimy się wynik przez sumę współczynników maski) - stosujemy ją aby uniknąć wyjścia z zakresu intensywności obrazu:
+
 ...
+
 int norm = 0;
             for (int i = 0; i < 3; i++)    
                 for (int j = 0; j < 3; j++)
                     norm += maska[i, j];
+                    
 ...
+
                   if (norm != 0)
                     {
                         R /= norm;
